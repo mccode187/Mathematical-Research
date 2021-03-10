@@ -72,7 +72,7 @@ def addLine(M,a,string):
 
 ################# ALGORITHM STARTS HERE #####################
 
-n=8
+n=9
 M = [[" " for x in range(n)] for y in range(n)]
 numberOfLines = 0
 incidenceInDiagonal = [False]*(2*n-1)
@@ -80,13 +80,17 @@ incidenceInDiagonal = [False]*(2*n-1)
 if n>0:
     addLine(M,0,"r")
     numberOfLines += 1
+    addLine(M,0,"c")
+    numberOfLines += 1
 
 if n>1:
     addLine(M,n-1,"r")
     numberOfLines += 1
+    addLine(M,n-1,"c")
+    numberOfLines += 1
 
-## Loop through all the diagonals
-for k in range(n-2):
+## Loop through all the diagonals (no need to loop through the central diagonal)
+for k in range(n-1):
     # Loop through diagonal in the northwest half of the grid
     # AND
     # Loop through diagonal in southeast half of the grid
@@ -146,6 +150,6 @@ for k in range(n-2):
             numberOfLines += 1
         printMatrix(M)
 
-print("n = ",n)
+print("n =",n)
 print(numberOfLines,"lines")
 printMatrix(M)
