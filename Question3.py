@@ -29,7 +29,7 @@ def powerset(iterable):
     return chain.from_iterable(combinations(s, r) for r in range(len(s)+1))
 
 ## (1)
-n=12
+n=7
 T=list(range(n))
 T_2=list(range(2*(n-1)+1))
 sets = list(powerset(T))
