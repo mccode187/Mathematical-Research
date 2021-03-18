@@ -1,5 +1,5 @@
 ## Michael Chu
-## 4/3/20
+## 3/4/20
 
 ## Question: Given an n by n grid, how many vertical and horizontal lines do
 ## we need to ensure that there is an intersection ('incidence') in every

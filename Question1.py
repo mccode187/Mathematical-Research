@@ -21,7 +21,7 @@ def powerset(iterable):
     return chain.from_iterable(combinations(s, r) for r in range(len(s)+1))
 
 ## (1)
-n=11
+n=0
 T=list(range(n+1))
 sets = list(powerset(T))
 
